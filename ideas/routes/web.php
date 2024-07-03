@@ -40,6 +40,8 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::resource('users', UserController::class)->only(['show', 'edit', 'update'])->middleware('auth');
 
+Route::get('profile', [UserController::class, 'profile'])->name('profile')->middleware('auth');
+
 Route::get('/terms', function () {
     return view('terms');
 });
