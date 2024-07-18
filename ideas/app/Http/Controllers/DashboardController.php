@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Idea;
 use Illuminate\Http\Request;
+use App\Mail\WelcomeEmail;
 
 class DashboardController extends Controller
 {
